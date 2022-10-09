@@ -59,6 +59,7 @@ div svg {
 #logoImage {
   margin-top: 0.15em;
   width: 6vw;
+  height: 5vh;
 }
 
 #logoImage:hover {
@@ -291,6 +292,7 @@ div svg {
 .overwatchLaunchVideo {
   width: 60vw;
   height: 42vh;
+  overflow: hidden;
   padding-right: 6vw;
   margin-left: 5vw;
 }
@@ -332,42 +334,43 @@ div svg {
 
 .bottomLayerTwoContent{
   width: 100vw;
-  height: 70vh;
+  height: 80vh;
   display: flex;
   position: relative;
 }
 
 .bottomLayerTwoVector{
-  top: -9vh;
+  top: -8vh;
   width: 100vw;
-  height: 85vh;
+  height: 95vh;
+  background-size: 100% 100%;
   display: flex;
   position: absolute;
   background-image: url(resources/Desktop_Outro_Characters.png);
 }
 
 .middleLayer {
-  margin: 0;
-  padding: 0;
   position: relative;
-}
-.middleLayerHeader {
-  font-size: 40px;
-  color: white;
-  text-shadow: 0 5px 12px black, 0 5px 12px black, 0 5px 12px black;
 }
 
 .middleLayerContent {
+  width: 100%;
+  height: auto;
   display: flex;
+  position: absolute;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-size: 100% 100%;
   background-image: url(resources/secondLayerBackground.jpg);
-  padding-bottom: 25px;
+  padding-bottom: 0vmin;
 }
 
 .middleLayerHeader {
-  text-align: center;
-  margin: 1em;
+  margin-top: 5vh;
+  font-size: 4vmin;
+  color: white;
+  text-shadow: 0 5px 12px black, 0 5px 12px black, 0 5px 12px black;
 }
 
 .middleLayerLinks {
@@ -375,7 +378,7 @@ div svg {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 0 2.5em;
+  margin: 3vmin 0 5vmin;
   opacity: 1;
 }
 
@@ -388,6 +391,8 @@ div svg {
   flex-direction: column;
   align-items: center;
   flex: 1 1 0px;
+  margin-bottom: 0vmin;
+  padding: 5vmin;
 }
 
 .fanArtImage,
@@ -395,14 +400,14 @@ div svg {
 .fanFictionImage,
 .professionalTeamsImage,
 .originStoriesImage {
-  width: 12em;
-  height: 14em;
+  width: 22vmin;
+  height: 25vmin;
   border: 0.3em solid rbg(255, 255, 255);
   border-radius: 1.5em;
   box-shadow: 0 10px 30px black;
   transition: 0.35s;
   padding: 0.1em;
-  margin: 0.5em 1em 1.5em 1em;
+  margin: 0.5vmin 1em 1.5em 1em;
 }
 
 .fanArtImage:hover,
@@ -420,18 +425,21 @@ div svg {
 .fanFictionSubtitle,
 .professionalTeamsSubtitle,
 .originStoriesSubtitle {
-  font-size: 24px;
+  font-size: 3.2vmin;
   color: white;
   text-shadow: 0 5px 12px black, 0 5px 12px black;
 }
 
 .footer {
+  width: 100%;
+  height: 3vh;
   background: linear-gradient(
     90deg,
     rgba(195, 196, 196, 1) 0%,
     rgba(255, 230, 230, 1) 0%,
     rgba(207, 221, 255, 1) 100%
   );
+  font-size: 2.5vmin;
   position: fixed;
   bottom: 0;
   left: 0;
