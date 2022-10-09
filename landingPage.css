@@ -151,6 +151,10 @@ div svg {
   margin-bottom: 6.5vmin;
 }
 
+.playNowLink{
+  margin-bottom: 6vmin;
+}
+
 .playNowButton {
   --c: #f06414; /* the color */
   --b: 0.1vmin; /* border length*/
@@ -186,10 +190,10 @@ div svg {
   opacity: 0.9;
   border: 0 solid transparent;
   font-size: 2.55vmin;
-  margin-bottom: 6vmin;
 }
 
 .playNowButton:hover {
+  cursor: pointer;
   transform: translate(0, 0);
   clip-path: polygon(
     0% var(--d),
