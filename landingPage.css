@@ -377,7 +377,6 @@ div svg {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  flex-wrap: wrap;
   margin: 3vmin 0 5vmin;
   opacity: 1;
 }
@@ -393,6 +392,7 @@ div svg {
   flex: 1 1 0px;
   margin-bottom: 0vmin;
   padding: 5vmin;
+  text-align: center;
 }
 
 .fanArtImage,
