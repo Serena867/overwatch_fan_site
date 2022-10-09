@@ -59,11 +59,11 @@ div svg {
 #logoImage {
   margin-top: 0.15em;
   width: 6vw;
-
 }
 
-#logoImage:hover{
-  filter: invert(58%) sepia(98%) saturate(1094%) hue-rotate(157deg) brightness(108%) contrast(96%);
+#logoImage:hover {
+  filter: invert(58%) sepia(98%) saturate(1094%) hue-rotate(157deg)
+    brightness(108%) contrast(96%);
 }
 
 #logoText {
@@ -97,15 +97,15 @@ div svg {
   line-height: 22px;
   font-size: 2.5vmin;
   white-space: nowrap;
-  transition: color .8s ease-in-out;
+  transition: color 0.8s ease-in-out;
 }
 
-.headerLink:hover{
+.headerLink:hover {
   color: #f06414;
   border-color: white;
 }
 
-.headerLink:first-child{
+.headerLink:first-child {
   padding: 0 16px;
   padding-left: 0;
   margin-left: 16px;
@@ -113,7 +113,6 @@ div svg {
 
 .headerLink:last-child {
   border: none;
-
 }
 
 .upperFloatingLayer {
@@ -124,7 +123,7 @@ div svg {
   width: 115vmin;
   height: 60.6vh;
   border-radius: 1.5em;
-  margin:22vmin auto 15vmin auto;
+  margin: 22vmin auto 15vmin auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -151,31 +150,33 @@ div svg {
   margin-bottom: 6.5vmin;
 }
 
-
 .playNowButton {
   --c: #f06414; /* the color */
-  --b: .1vmin;    /* border length*/
-  --d: 0.8vmin;    /* the cube depth */
-  
+  --b: 0.1vmin; /* border length*/
+  --d: 0.8vmin; /* the cube depth */
+
   --_s: calc(var(--d) + var(--b));
   color: var(--c);
   border: solid #0000;
   border-width: var(--b) var(--b) var(--_s) var(--_s);
-  background:
-    conic-gradient(at left var(--d)  bottom var(--d),
-      #0000 90deg, rgb(255 255 255 /0.3) 0 225deg,rgb(255 255 255 /0.6) 0) border-box,
-    conic-gradient(at left var(--_s) bottom var(--_s),
-      #0000 90deg,var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b))  border-box;
-  transform: translate(calc(var(--d)/-1),var(--d));
-  clip-path: 
-    polygon(
-     var(--d) 0%, 
-     var(--d) 0%, 
-     100% 0%, 
-     100% calc(100% - var(--d)),
-     100% calc(100% - var(--d)),
-     var(--d) calc(100% - var(--d))
-    );
+  background: conic-gradient(
+        at left var(--d) bottom var(--d),
+        #0000 90deg,
+        rgb(255 255 255 /0.3) 0 225deg,
+        rgb(255 255 255 /0.6) 0
+      )
+      border-box,
+    conic-gradient(at left var(--_s) bottom var(--_s), #0000 90deg, var(--c) 0)
+      0 100% / calc(100% - var(--b)) calc(100% - var(--b)) border-box;
+  transform: translate(calc(var(--d) / -1), var(--d));
+  clip-path: polygon(
+    var(--d) 0%,
+    var(--d) 0%,
+    100% 0%,
+    100% calc(100% - var(--d)),
+    100% calc(100% - var(--d)),
+    var(--d) calc(100% - var(--d))
+  );
   transition: 0.5s;
   width: 20vmin;
   height: 8vmin;
@@ -187,45 +188,162 @@ div svg {
   margin-bottom: 6vmin;
 }
 
-.playNowButton:hover{
-  transform: translate(0,0);
-  clip-path: 
-    polygon(
-     0% var(--d), 
-     var(--d) 0%, 
-     100% 0%, 
-     100% calc(100% - var(--d)), 
-     calc(100% - var(--d)) 100%, 
-     0% 100%
-   );
+.playNowButton:hover {
+  transform: translate(0, 0);
+  clip-path: polygon(
+    0% var(--d),
+    var(--d) 0%,
+    100% 0%,
+    100% calc(100% - var(--d)),
+    calc(100% - var(--d)) 100%,
+    0% 100%
+  );
 }
 
-.platformsContainer{
+.platformsContainer {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.logo{
+.logo {
   width: 18vmin;
   margin-left: 5vmin;
 }
 
-.battleNetLogo:hover, .xboxLogo:hover, .playstationLogo:hover, .nintendoLogo:hover{
-  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%)
+.battleNetLogo:hover,
+.xboxLogo:hover,
+.playstationLogo:hover,
+.nintendoLogo:hover {
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg)
+    brightness(104%) contrast(97%);
 }
 
-
-.xboxLink, .playstationLink, .nintendoLink{
+.xboxLink,
+.playstationLink,
+.nintendoLink {
   margin-left: 5vmin;
 }
 
-.battleNetLogo, .xboxLogo{
+.battleNetLogo,
+.xboxLogo {
   width: 26vmin;
 }
 
-.logo:first-child{
+.logo:first-child {
   margin-left: 0;
+}
+
+.secondLayer {
+  position: relative;
+}
+
+.secondLayerContainer {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-image: url(resources/secondLayerBackground.jpg);
+  background-size: 100% 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+.secondLayerLeftSide {
+  height: 100%;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.secondLayerRightSide {
+  width: 45%;
+}
+
+.secondLayerLeftSideHeader {
+  display: flex;
+  font-size: 3.5vw;
+  font-weight: bold;
+  margin-bottom: 6vh;
+  margin-top: -2vh;
+}
+
+.secondLayerLeftSideContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.9vw;
+  margin-bottom: 3vh;
+}
+
+.secondLayerRightSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overwatchLaunchVideo {
+  width: 60vw;
+  height: 42vh;
+  padding-right: 6vw;
+  margin-left: 5vw;
+}
+
+.bottomLayer {
+  width: 100vw;
+  height: 70vh;
+  background-image: url(resources/sunnyField.jpg);
+  background-size: 100% 100%;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomLayerContent {
+  height: 100%;
+  width: 100%;
+  color: white;
+  text-shadow: 0 5px 12px black, 0 5px 12px gray, 0 5px 12px black;
+  font-size: 4vw;
+  display: flex;
+  object-fit: cover;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.textSignature {
+  margin-top: 1.5vh;
+  font-size: 3.5vw;
+  display: flex;
+}
+
+.bottomLayerTwo{
+  position:relative;
+}
+
+.bottomLayerTwoContent{
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  position: relative;
+}
+
+.bottomLayerTwoVector{
+  top: -9vh;
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  position: absolute;
+  background-image: url(resources/Desktop_Outro_Characters.png);
 }
 
 .middleLayer {
@@ -243,7 +361,7 @@ div svg {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(15deg, #b4b4b4 22%, #ffbe69 100%);
+  background-image: url(resources/secondLayerBackground.jpg);
   padding-bottom: 25px;
 }
 
@@ -305,35 +423,6 @@ div svg {
   font-size: 24px;
   color: white;
   text-shadow: 0 5px 12px black, 0 5px 12px black;
-}
-
-.bottomLayer {
-  height: 100vmin;
-  background-image: url(resources/winstonBG1.jpg);
-  background-size: 100% 100%;
-  object-fit: cover;
-  background-attachment: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bottomLayerContent {
-  color: white;
-  text-shadow: 0 5px 12px black, 0 5px 12px gray, 0 5px 12px black;
-  font-size: 7vmin;
-  padding-top: 1em;
-  display: flex;
-  z-index: 0;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.textSignature {
-  margin-top: 1.5vmin;
-  font-size: 3.5vmin;
-  display: flex;
 }
 
 .footer {
