@@ -328,8 +328,9 @@ div svg {
 
 .textSignature {
   margin-top: 1.5vh;
-  font-size: 3.5vw;
+  font-size: 1.8vw;
   display: flex;
+  padding-left: 25vw;
 }
 
 .bottomLayerTwo{
